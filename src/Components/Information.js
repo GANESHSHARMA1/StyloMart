@@ -3,7 +3,9 @@ import React from "react";
 function Information() {
   return (
     <div className="container" id="Info">
-      <h1 className="text-center my-4">What is StyloMart</h1>
+      <h1 className="text-center my-4" style={{ fontFamily: "HP Simplified" }}>
+        What is StyloMart
+      </h1>
       <p className="text-justify text-wrap">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. A vero fugit
         deleniti eos consectetur placeat hic aut ad ut dolorem ipsum est,

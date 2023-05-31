@@ -18,7 +18,7 @@ function Maylike() {
             <li class="list-group-item">An item</li>
             <li class="list-group-item">A second item</li>
           </ul>
-          <a href="/dressing" className="btn btn-primary">
+          <a href=" " className="btn btn-primary">
             AR Dressing Room
           </a>
         </div>
@@ -38,7 +38,7 @@ function Maylike() {
             <li class="list-group-item">An item</li>
             <li class="list-group-item">A second item</li>
           </ul>
-          <a href="/dressing" className="btn btn-primary">
+          <a href=" " className="btn btn-primary">
             AR Dressing Room
           </a>
         </div>
@@ -58,7 +58,7 @@ function Maylike() {
             <li class="list-group-item">An item</li>
             <li class="list-group-item">A second item</li>
           </ul>
-          <a href="/dressing" className="btn btn-primary">
+          <a href="" className="btn btn-primary">
             AR Dressing Room
           </a>
         </div>

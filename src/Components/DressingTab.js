@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import DressingCamera from "./DressingCamera";
-import Background from "./Images/MainBack.jpg";
+import Background from "./Images/MainBack.png";
 import VideoInput from "./VideoInput";
 import PhotoInput from "./PhotoInput";
 
@@ -71,7 +71,7 @@ const DressingTab = () => {
         style={{
           backgroundImage: `url(${Background})`,
           width: "100vw",
-          height: "130vh",
+          height: "120vh",
         }}
       >
         <ul className="nav justify-content-center">
