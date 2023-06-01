@@ -14,9 +14,9 @@ export default function Offers() {
         }}
       >
         <img
-          src="https://m.media-amazon.com/images/I/71ZDY57yTQL._AC_UY327_FMwebp_QL65_.jpg"
+          src="https://m.media-amazon.com/images/I/41kjAw-igOL._MCnd_AC_.jpg"
           className="card-img-top"
-          alt="https://m.media-amazon.com/images/I/71ZDY57yTQL._AC_UY327_FMwebp_QL65_.jpg"
+          alt="https://m.media-amazon.com/images/I/41kjAw-igOL._MCnd_AC_.jpg"
         />
         <div className="card-body">
           <h5 className="card-title">Card title</h5>
@@ -36,9 +36,9 @@ export default function Offers() {
         }}
       >
         <img
-          src="https://m.media-amazon.com/images/I/71ZDY57yTQL._AC_UY327_FMwebp_QL65_.jpg"
+          src="https://m.media-amazon.com/images/I/41kjAw-igOL._MCnd_AC_.jpg"
           className="card-img-top"
-          alt="https://m.media-amazon.com/images/I/71ZDY57yTQL._AC_UY327_FMwebp_QL65_.jpg"
+          alt="https://m.media-amazon.com/images/I/41kjAw-igOL._MCnd_AC_.jpg"
         />
         <div className="card-body">
           <h5 className="card-title">Card title</h5>
@@ -58,9 +58,9 @@ export default function Offers() {
         }}
       >
         <img
-          src="https://m.media-amazon.com/images/I/71ZDY57yTQL._AC_UY327_FMwebp_QL65_.jpg"
+          src="https://m.media-amazon.com/images/I/41kjAw-igOL._MCnd_AC_.jpg"
           className="card-img-top"
-          alt="https://m.media-amazon.com/images/I/71ZDY57yTQL._AC_UY327_FMwebp_QL65_.jpg"
+          alt="https://m.media-amazon.com/images/I/41kjAw-igOL._MCnd_AC_.jpg"
         />
         <div className="card-body">
           <h5 className="card-title">Card title</h5>

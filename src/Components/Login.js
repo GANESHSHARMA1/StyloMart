@@ -1,10 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Login.css";
 
 const Login = () => {
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+  const [errorMessage, setErrorMessage] = useState("");
+
   const handleSignupClick = () => {
     const loginForm = document.querySelector(".form-container .form-inner");
-    loginForm.style.marginLeft = "-50%";
+    loginForm.style.marginLeft = "-100%";
   };
 
   const handleLoginClick = () => {
@@ -15,6 +19,58 @@ const Login = () => {
   const handleSignupLinkClick = () => {
     const signupBtn = document.querySelector("label.signup");
     signupBtn.click();
+  };
+
+  const handleLoginSubmit = (e) => {
+    e.preventDefault();
+
+    fetch("http://localhost:3000/login", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        username,
+        password,
+      }),
+    })
+      .then((response) => {
+        if (response.status === 200) {
+          console.log("Login Success");
+          // Perform any desired action upon successful login
+        } else if (response.status === 401) {
+          setErrorMessage("Incorrect username or password");
+        }
+      })
+      .catch((error) => {
+        console.error("Error:", error);
+      });
+  };
+
+  const handleSignupSubmit = (e) => {
+    e.preventDefault();
+
+    fetch("http://localhost:3000/signup", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        username,
+        password,
+      }),
+    })
+      .then((response) => {
+        if (response.status === 200) {
+          console.log("Signup Success");
+          // Perform any desired action upon successful signup
+        } else {
+          setErrorMessage("Signup failed");
+        }
+      })
+      .catch((error) => {
+        console.error("Error:", error);
+      });
   };
 
   return (
@@ -44,12 +100,24 @@ const Login = () => {
           <div className="slider-tab"></div>
         </div>
         <div className="form-inner">
-          <form action="#" className="login">
+          <form onSubmit={handleLoginSubmit} className="login">
             <div className="field">
-              <input type="text" placeholder="Email Address" required />
+              <input
+                type="text"
+                placeholder="Email Address"
+                required
+                value={username}
+                onChange={(e) => setUsername(e.target.value)}
+              />
             </div>
             <div className="field">
-              <input type="password" placeholder="Password" required />
+              <input
+                type="password"
+                placeholder="Password"
+                required
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+              />
             </div>
             <div className="pass-link">
               <a href="/">Forgot password?</a>
@@ -65,12 +133,24 @@ const Login = () => {
               </a>
             </div>
           </form>
-          <form action="#" className="signup">
+          <form onSubmit={handleSignupSubmit} className="signup">
             <div className="field">
-              <input type="text" placeholder="Email Address" required />
+              <input
+                type="text"
+                placeholder="Email Address"
+                required
+                value={username}
+                onChange={(e) => setUsername(e.target.value)}
+              />
             </div>
             <div className="field">
-              <input type="password" placeholder="Password" required />
+              <input
+                type="password"
+                placeholder="Password"
+                required
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+              />
             </div>
             <div className="field">
               <input type="password" placeholder="Confirm password" required />
@@ -80,9 +160,11 @@ const Login = () => {
               <input type="submit" value="Signup" />
             </div>
           </form>
+          {errorMessage && <div className="error-message">{errorMessage}</div>}
         </div>
       </div>
     </div>
   );
 };
+
 export default Login;

@@ -7,6 +7,8 @@ import Login from "./Components/Login";
 import Home from "./Components/Home";
 
 import { Routes, Route, BrowserRouter as Router } from "react-router-dom";
+import Closet from "./Components/Closet";
+import About from "./Components/About";
 
 function App() {
   return (
@@ -16,6 +18,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/ardressing" element={<ARDressing />} />
+          <Route path="/closet" element={<Closet />} />
+          <Route path="/about" element={<About />} />
           <Route path="/login" element={<Login />} />
         </Routes>
         <Footer />

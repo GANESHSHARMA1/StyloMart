@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Login from "./Login";
 import { Link } from "react-router-dom";
 import Logo from "./Images/Logo11.png";
+import search from "./Images/Search.gif";
 
 const Navbar = () => {
   const [showLoginForm, setShowLoginForm] = useState(false);
@@ -56,12 +57,12 @@ const Navbar = () => {
               </Link>
               <ul className="dropdown-menu">
                 <li>
-                  <Link className="dropdown-item" to="/">
+                  <Link className="dropdown-item" to="/about">
                     About Us
                   </Link>
                 </li>
                 <li>
-                  <Link className="dropdown-item" to="/">
+                  <Link className="dropdown-item" to="/about">
                     How to Use
                   </Link>
                 </li>
@@ -69,8 +70,8 @@ const Navbar = () => {
                   <hr className="dropdown-divider" />
                 </li>
                 <li>
-                  <Link className="dropdown-item" to="/">
-                    Something else{" "}
+                  <Link className="dropdown-item" to="/about">
+                    Latest Update{" "}
                   </Link>
                 </li>
               </ul>
@@ -84,7 +85,7 @@ const Navbar = () => {
                 Your Closet
               </Link>
             </li>
-            <li className="nav-item">
+            {/* <li className="nav-item">
               <Link
                 className="nav-link active"
                 aria-current="page"
@@ -92,7 +93,7 @@ const Navbar = () => {
               >
                 Orders
               </Link>
-            </li>
+            </li> */}
           </ul>
           <form className="d-flex" role="search">
             <input
@@ -101,8 +102,8 @@ const Navbar = () => {
               placeholder="Search"
               aria-label="Search"
             />
-            <button className="btn btn-outline-success" type="submit">
-              Search
+            <button>
+              <img src={search} alt="GIF Image" className="img-fluid" />
             </button>
           </form>
           <button

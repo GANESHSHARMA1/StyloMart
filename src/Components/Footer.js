@@ -2,9 +2,9 @@ import React from "react";
 
 function Footer() {
   return (
-    <footer className=" mx-5 py-5">
+    <footer className="mx-5 py-5">
       <div className="row">
-        <div className="col-2">
+        <div className="col-12 col-md-6 col-lg-3 mb-4">
           <h5>Get to Know Us</h5>
           <ul className="nav flex-column">
             <li className="nav-item mb-2">
@@ -35,7 +35,7 @@ function Footer() {
           </ul>
         </div>
 
-        <div className="col-2">
+        <div className="col-12 col-md-6 col-lg-3 mb-4">
           <h5>Connect with Us</h5>
           <ul className="nav flex-column">
             <li className="nav-item mb-2">
@@ -66,7 +66,7 @@ function Footer() {
           </ul>
         </div>
 
-        <div className="col-2">
+        <div className="col-12 col-md-6 col-lg-3 mb-4">
           <h5>Let Us Help You</h5>
           <ul className="nav flex-column">
             <li className="nav-item mb-2">
@@ -97,12 +97,12 @@ function Footer() {
           </ul>
         </div>
 
-        <div className="col-4 offset-1">
+        <div className="col-12 col-md-6 col-lg-3 mb-4">
           <form>
             <h5>Subscribe to our newsletter</h5>
-            <p>Monthly digest of whats new and exciting from us.</p>
+            <p>Monthly digest of what's new and exciting from us.</p>
             <div className="d-flex w-100 gap-2">
-              <label for="newsletter1" className="visually-hidden">
+              <label htmlFor="newsletter1" className="visually-hidden">
                 Email address
               </label>
               <input
